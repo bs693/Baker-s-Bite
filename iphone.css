@@ -1,0 +1,105 @@
+.imgCake{
+/*center the image*/
+max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+
+.grid-container {
+  display: grid;
+ 
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.grid-item {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.wrap {
+	white-space : normal !important;
+}
+
+.panel-btn{
+	width: 80%;
+}
+
+.header-banner {
+	margin: auto;
+	background: url("back1.jpg") no-repeat 50% 50%;
+	width: 100%;
+	height: 100%;	
+	top: 0;
+	display: table;
+	background-size: cover;
+}
+
+.header-banner .inner{
+	display: table-cell;
+	max-width: none;	
+}
+
+.inner .banner-data{
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+	color: #800000;
+}
+
+.banner-data h1{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #f9f3f4;
+	font-size: 350%;
+	text-shadow: 0 0 300px #000;
+	margin-top: 30%;
+    margin-bottom: 0;
+}
+
+.banner-data h2{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #f9f3f4;
+	text-shadow: 0 0 300px #000;
+	margin-top: 0;
+    margin-bottom: 10%;
+}
+
+.banner-data .ui-btn{
+	margin-bottom: 64%;
+	color: #8B0000;
+	margin: auto;
+}
+
+.common-banner{
+	background: url(intelligence1.jpg) no-repeat 50% 50%;
+	margin: auto;
+	width: 100%;
+	top: 0;
+	display: table;
+	background-size: cover;
+	background-color: #FFD700;
+}
+
+.common-banner .inner{
+	display: table-cell;
+	max-width: none;	
+}
+
+.common-banner .inner .banner-data{
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+} 
+
+.common-banner .inner .banner-data h1{
+	color: #f98a1d;
+	text-shadow: 0 0 300px #000;
+	margin-top: 20%;
+    margin-bottom: 0;
+}

@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Baker's Bite </title>
+<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" >  
+		
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<script src="utilities.js"></script>
+		<link rel="stylesheet" type="text/css" href="iphone.css" media="screen"/>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+</head>
+<body>
+		<!-- Start of Home page -->
+		<div data-role="page" data-theme="a" id="home"> 
+			<div data-role="header" data-theme="b">
+				<h1 class="header-title">Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea"></a>
+				</div>
+				<div data-role="panel" id="panelArea" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="header-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1 style="font-family: serif;
+										color: #f9f3f4 !important;
+										font-size: 350%;
+										text-shadow: 0 0 300px #000;
+										margin-top: 30%;
+									    margin-bottom: 0;">Baker's Bite</h1>		
+							<h2>The Beginner's Baking Book</h2>
+							<a class="ui-btn ui-corner-all ui-btn-a" href="#signup">GET STARTED</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content" data-theme="a">
+				<h2>Want to bake?</h2>
+					<p>This Baking Book is a universal platform to learn, share and explore various baking recipes. Click on Get Started to join the club and nuture your love for baking!  </p>
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+		<!-- Start of the SignUp page -->
+		<div data-role="page" data-theme="a" id="signup">   
+
+				<div data-role="header" data-theme="b">
+				<h1 class="header-title">Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea1"></a>
+				</div>
+				<div data-role="panel" id="panelArea1" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				<div class="header-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Baker's Bite</h1>
+							<h2>Register now to take advantage of this site</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="content" data-theme="a">
+		   <form method="post" id="register">             
+			<!-- FORM FIELDS GO HERE -->       
+			<label for="name">Your Name:</label>
+			<input type="text" name="name" id="name" required>
+		 
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required>
+		 
+			<label for="dob">Date of Birth:</label>
+			<input type="date" name="dob" id="dob" max="2004-07-28" required>  
+		                    
+			<label for="pwd">Password:</label>
+			<input type="password" name="pwd" id="pwd" required>
+
+			<br />       
+			<!-- <input href="#mainMenu" type="submit" value="Sign up" onclick="signUp()">        -->
+			<input type="button" value="Sign up" onclick="signUp()">       
+			<a href="#mainMenu" class="wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-icon-right ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Browse without an account</a>
+		   </form>    
+		   </div><!-- /content -->      
+		   <script src="stay_standalone.js"></script> 
+
+		  <div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+
+
+	   </div> 
+	   
+
+
+		<!-- Start of the Main Menu page -->
+		<div data-role="page" data-theme="a" id="mainMenu"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea2"></a>
+				</div>
+				<div data-role="panel" id="panelArea2" data-theme="a" data-display="overlay" data-position="right"> 
+
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Main Menu</h1>
+							<h2>Pick what category you want to bake</h2>
+							<h4 id="userName1"></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<a href="#bnb" class="wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-icon-right ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a>
+
+				<a href="#cakes" class="wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-icon-right ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a>
+
+				
+
+				<a href="#pastry" class="wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-icon-right ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Pastry</a>
+
+				<a href="#savory" class="wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-icon-right ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+<!-- Start of the Cakes page -->
+		<div data-role="page" data-theme="a" id="cakes"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea3"></a>
+				</div>
+				<div data-role="panel" id="panelArea3" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Cakes</h1>
+							<h2>Which cake would you like to bake today?</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+								
+				<div class="grid-container">
+				  <a href="#rainbowCake" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b" >Rainbow Cake</a>
+				  <a href="#chocolateCake" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b">Chocolate Cake</a>
+				  <a href="#blackForest" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b">Black Forest</a>
+				  <a href="#walnutCake" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b">Walnut Cake</a>
+				
+				</div>
+
+
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+<!-- Start of the Rainbow Cake page -->
+		<div data-role="page" data-theme="a" id="rainbowCake"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea4"></a>
+				</div>
+				<div data-role="panel" id="panelArea4" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Rainbow Cake</h1>
+							<h2>The happiest cake you’ll ever eat! The vibrant colors will add the perfect touch to any celebration!</h2>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+
+				<!-- Cake image -->
+				<center><img id="imgCake" src="Rainbow-Cake600x600_2.jpg" width="320" /></center>
+								
+			<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+                <iframe src="https://www.youtube.com/embed/laT2rrxLf6w" frameborder="0" allowfullscreen>
+                </iframe>   
+            </div>
+
+			<ul style="list-style-type:circle"> INGREDIENTS
+			  <li>3/4 cup all-purpose flour</li>
+			  <li>3/4 cup cornstarch</li>
+			  <li>6 large egg whites</li>
+			  <li>6 large egg yolks</li>
+			  <li>1 1/2 teaspoons vanilla extract</li>
+			  <li>3/4 cup + 6 tablespoons sugar</li>
+			  <li>1/4 teaspoon salt</li>
+			  <li>2 cups unsalted butter, room temperature</li>
+			  <li>1 teaspoon vanilla extract</li>
+			  <li>5 cups confectioner's sugar</li>
+			  <li>Pink, orange, yellow, green, blue and purple food coloring</li>
+			</ul>
+				
+			<ul style="list-style-type:circle"> INSTRUCTIONS
+			  <li>Beat the egg yolks, vanilla extract and 3/4 cup sugar with an electric mixer on high speed until thick and pale. Set aside.</li>
+			  <li>In a separate bowl, beat the egg whites and salt with an electric mixer on medium speed until soft peaks form. Slowly add the remaining 6 tablespoons sugar and beat until stiff, glossy peaks form.</li>
+			  <li>Gently fold the egg white mixture into the egg yolk mixture. Combine the flour and cornstarch in a small bowl, then add to the egg mixture in 3 additions.</li>
+			  <li>Divide the mixture into 6 bowls and dye each bowl of batter a different color. Be sure to gently fold the food coloring in - you want to keep the batter as airy as possible.</li>
+			  <li>Pour the batter into 6 greased and floured 9-inch round cake pans. Bake at 350 degrees F for about 5 minutes, until the cakes are fully cooked. Transfer the cakes to a wire rack and allow them to fully cool.</li>
+			  <li>Make the buttercream: Place the butter in a bowl and whip with an electric mixer until pale and fluffy. Add the vanilla extract and mix to combine. Add the confectioner's sugar one cup at a time, mixing well after each addition. Then whip for 3 to 5 minutes, until fluffy. Set a third of the buttercream aside. Divide the remaining buttercream into 6 bowls and dye them the colors of the rainbow. Place each color in a piping bag fitted with a star-shaped piping tip.</li>
+			  <li>Using a plate as a stencil, cut the edges off each layer of cake. This will give the cake a clean look and make layering much easier.</li>
+			  <li>Place the purple layer of cake on a serving platter of your choice and spread some of the white buttercream evenly onto the surface. Place the blue layer of cake on top and top with some more buttercream. Continue in the order of the rainbow until you reach the pink layer. Spread a thin layer of the remaining white buttercream over the entire surface of the cake.</li>
+			  <li>Pipe rainbow stripes of buttercream onto the cake, starting with the base of the cake with the purple buttercream. Once you reach the pink buttercream, work backward in the order of the rainbow to create a pretty, rainbow ombre effect. Repeat until the cake is fully covered in buttercream and enjoy!</li>
+			  
+			</ul>
+					<h1>Comments</h1>
+					<p>Tell us how your experience was:</p>
+					<p id="userComments"></p>
+			<form method="post">
+				<label>Name: <input id="first_name" name="first_name"></label>
+				<label>Email: <input id="user_email" name="user_email"></label>
+				<div>
+					<textarea name="comments" id="comment" style="font-family:sans-serif;font-size:1.2em;">
+					 
+					</textarea>
+				</div>
+				<input type="button" value="Submit" onclick="saveComment()">
+			</form>
+
+
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+<!-- Start of the Bread and Biscuits page -->
+		<div data-role="page" data-theme="a" id="bnb"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel="back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea5"></a>
+				</div>
+				<div data-role="panel" id="panelArea5" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Bread and Biscuits</h1>
+							<h2>What would you like to bake today?</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+								
+				<div class="grid-container">
+				  <a href="#bananaBread" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b" >Banana Bread</a>
+				  <a href="#cornBread" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b">Corn Bread</a>				
+				</div>
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+<!-- Start of the Banana Bread page -->
+		<div data-role="page" data-theme="a" id="bananaBread"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea6"></a>
+				</div>
+				<div data-role="panel" id="panelArea6" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Banana Bread</h1>
+							<h2>There is no better use for stale bananas than banana bread!</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<!-- Cake image -->
+				<center><img id="imgCake" src="bananaBread.jpg" width="320" /></center>
+								
+			<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+            
+                <iframe src="https://www.youtube.com/embed/bSQyJuMN0d4" frameborder="0" allowfullscreen>
+                </iframe>   
+            </div>
+
+			<ul style="list-style-type:circle"> INGREDIENTS
+			  <li>3 bananas (as ripe as possible)</li>
+			  <li>6 tablespoons vegetable oil</li>
+			  <li>1/2 cup sugar</li>
+			  <li>1 egg</li>
+			  <li>1 teaspoon vanilla extract</li>
+			  <li>1/4 teaspoon salt</li>
+			  <li>1/4 teaspoon salt</li>
+			  <li>1 1/2 cups all-purpose flour</li>
+			  <li>1 teaspoon baking soda</li>
+			  <li>1 teaspoon baking powder</li>
+			  <li>Pink, orange, yellow, green, blue and purple food coloring</li>
+			</ul>
+				
+			<ul style="list-style-type:circle"> INSTRUCTIONS
+			  <li>Combine bananas, oil and sugar. Then add the egg, vanilla and salt.</li>
+			  <li>Mix flour, baking soda and baking powder together in a separate bowl and add to banana mixture.</li>
+			  <li>Pour into a greased loaf pan and bake at 350F for 45 minutes. Cool for 5 minutes in the pan, then turn out onto a wire rack and cool completely.</li>
+			</ul>
+
+
+			<h1>Comments</h1>
+					<p>Tell us how your experience was:</p>
+					<p id="userComments2"></p>
+			<form method="post">
+				<label>Name: <input id="first_name2" name="first_name"></label>
+				<label>Email: <input id="user_email2" name="user_email"></label>
+				<div>
+					<textarea name="comments" id="comment2" style="font-family:sans-serif;font-size:1.2em;">
+					 
+					</textarea>
+				</div>
+				<input type="button" value="Submit" onclick="saveComment2()">
+			</form>
+
+					
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+<!-- Start of the Pastry page -->
+		<div data-role="page" data-theme="a" id="pastry"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea7"></a>
+				</div>
+				<div data-role="panel" id="panelArea7" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Pastry</h1>
+							<h2>What would you like to bake today?</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+								
+				<div class="grid-container">
+				  <a href="#SCCP" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b" >Strawberry Cream Cheese Pastries</a>
+				  <a href="#cornBread" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b">Puff Pastry</a>				
+				</div>
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+<!-- Start of the Strawberry Cream Cheese Pastry page -->
+		<div data-role="page" data-theme="a" id="SCCP"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea8"></a>
+				</div>
+				<div data-role="panel" id="panelArea8" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Strawberry Cream Cheese Pastry</h1>
+							<h2>Whenever you are craving for something sweet, delicious but quick and easy to prepare!</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<!-- Cake image -->
+				<center><img id="imgCake" src="SCCP.jpeg" width="320" /></center>
+								
+			<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+            
+                <iframe src="https://www.youtube.com/embed/3_Pp9fwLkBY" frameborder="0" allowfullscreen>
+                </iframe>   
+            </div>
+
+			<ul style="list-style-type:circle"> INGREDIENTS
+			  <li>1 sheet ( 8 ounces package) puff pastry, thawed</li>
+			  <li>3 ounces (100 grams cream cheese, room temperature 3 tablespoons (45 grams sugar)</li>
+			  <li>10 ounces (300 grams fresh strawberries, cut into slices 1 teaspoon (5 grams vanilla extract)</li>
+			  <li>1 small egg, beaten, for brushing</li>
+			  <li>Powdered sugar, for serving (optional)</li>
+			</ul>
+				
+			<ul style="list-style-type:circle"> INSTRUCTIONS
+			  <li>Preheat the oven to 400F (200C). Line a baking sheet with parchment paper.</li>
+			  <li>In a small bowl, beat the cream cheese until smooth. Add sugar and vanilla and mix until well combined.</li>
+			  <li>Cut the sheet of puff pastry into 6 rectangles.</li>
+			  <li>Use a fork to prick the centers of the rectangles, leaving 1/2 inch border unpriced around the edges.</li>
+			  <li>Brush the edges with beaten egg.</li>
+			  <li>Spread cream cheese mixture into the center of rectangles and arrange strawberry slices on top.</li>
+			  <li>Bake for 15­18 minutes until golden brown.</li>
+			  <li>Cool completely to a wire rack. Dust with powdered sugar before serving if desired.</li>
+			</ul>
+					
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+<!-- Start of the Savory page -->
+		<div data-role="page" data-theme="a" id="savory"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea9"></a>
+				</div>
+				<div data-role="panel" id="panelArea9" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Savory</h1>
+							<h2>What would you like to bake today?</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+								
+				<div class="grid-container">
+				  <a href="#SSP" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b" >Starry Spinach Pie</a>
+				  <a href="#CPP" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b">Chicken Pot Pie</a>				
+				</div>
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+<!-- Start of the Starry Spinach Pie page -->
+		<div data-role="page" data-theme="a" id="SSP"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea10"></a>
+				</div>
+				<div data-role="panel" id="panelArea10" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Starry Spinach Pie</h1>
+							<h2>Recipe</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<!-- Cake image -->
+				<center><img id="imgCake" src="starry-spinach.jpeg" width="320" /></center>
+								
+			<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+            
+                <iframe src="https://www.youtube.com/embed/I5i9bjaV4kk" frameborder="0" allowfullscreen>
+                </iframe>   
+            </div>
+
+			<ul style="list-style-type:circle"> INGREDIENTS
+			  <li>12 1/3 ounces chopped cooked spinach</li>
+			  <li>7 ounces fresh ricotta, dismantled</li>
+			  <li>2 eggs</li>
+			  <li>3 1/2 ounces grated Parmesan cheese</li>
+			  <li>Salt</li>
+			  <li>Black pepper</li>
+			  <li>Nutmeg</li>
+			  <li>2 tablespoons breadcrumbs</li>
+			  <li>Round sheets of pie dough</li>
+			</ul>
+				
+			<ul style="list-style-type:circle"> INSTRUCTIONS
+			  <li>Mix spinach, ricotta, 1 egg, parmesan cheese, salt, pepper, nutmeg and breadcrumbs. Reserve.</li>
+			  <li>Place one of the dough sheets onto a greased pan.</li>
+			  <li>Place some filling in the center.</li>
+			  <li>Place the rest of the filling around the edges.</li>
+			  <li>Cover with another sheet. Removing all air from inside.</li>
+			  <li>Tighten with the aid of a fork.</li>
+			  <li>Cut the edges with the aid of scissors and turn the edges up.</li>
+			  <li>Make a hole in the middle, brush with 1 beaten egg and bake in a preheated oven at 356 degrees for 30 minutes.</li>
+			</ul>
+					
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+<!-- Start of the Chicken Pot Pie page -->
+		<div data-role="page" data-theme="a" id="CPP"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea11"></a>
+				</div>
+				<div data-role="panel" id="panelArea11" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Chicken Pot Pie</h1>
+							<h2>Individual chicken pot pies to warm you up on a cold day!</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<!-- Cake image -->
+				<center><img id="imgCake" src="CPP.png" width="320" /></center>
+								
+			<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+            
+                <iframe src="https://www.youtube.com/embed/3aaPyvlgjPs" frameborder="0" allowfullscreen>
+                </iframe>   
+            </div>
+
+			<ul style="list-style-type:circle"> INGREDIENTS for 8 Servings
+			  <li>3/4 onion, finely chopped</li>
+			  <li>1 stalk celery, diced</li>
+			  <li>6 tablespoons butter</li>
+			  <li>Salt and pepper</li>
+			  <li>6 tablespoons flour</li>
+			  <li>3 cups chicken stock</li>
+			  <li>1 cup milk</li>
+			  <li>1 large potato, diced and blanched</li>
+			  <li>1 large carrot, diced and blanched</li>
+			  <li>1 cup frozen peas, defrosted</li>
+			  <li>1 cup frozen corn, defrosted</li>
+			  <li>5 button mushrooms, halved and sliced</li>
+			  <li>2 chicken breasts, cooked and roughly chopped</li>
+			  <li>Basic pie crust, rolled to 1/8-inch thick</li>
+			  <li>1 beaten egg</li>
+			</ul>
+				
+			<ul style="list-style-type:circle"> INSTRUCTIONS
+			  <li>Melt the butter in a frying pan set to medium heat. Add the onions and celery and cook for 2 minutes. Add the salt, pepper and flour and cook for 3-4 minutes.</li>
+			  <li>Pour in the chicken stock and bring it to a boil. Reduce to low heat and simmer until the stew thickens, 8-10 minutes. Add the milk and cook for an additional 4 minutes.</li>
+			  <li>Remove the pan from the heat and add the potatoes, carrot, peas, corn, mushrooms and chicken. Season with more salt and pepper, if desired. Pour the stew into 8 ramekins.</li>
+			  <li>Cut the pie crust into 8 circles that are slightly bigger than the rim of the ramekins.</li>
+			  <li>Place the crust on top of the ramekins and tuck the edges of the crust into the edges of the ramekins with a fork. Cut open an X in the center of each pot pie with a sharp knife, then brush with the beaten egg. Place the ramekins on a baking sheet and bake at 400F for 35-40 minutes until the crust is brown and crispy.</li>
+			  <li>Remove from the oven and let cool 5 minutes before serving.</li>
+			  
+			</ul>
+					
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+<!-- Start of the Experts page -->
+		<div data-role="page" data-theme="a" id="experts"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea12"></a>
+				</div>
+				<div data-role="panel" id="panelArea12" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Meet the Experts</h1>
+							<h2>Inspiring bakers across the globe!</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+								
+				<div class="grid-container">
+				  <a href="#marryBerry" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b" >Marry Berry</a>
+				  <a href="#paulHollywood" class="grid-item wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-b ui-shadow"  data-theme="b">Paul Hollywood</a>				
+				</div>
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+<!-- Start of the Mary Berry page -->
+		<div data-role="page" data-theme="a" id="marryBerry"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea13"></a>
+				</div>
+				<div data-role="panel" id="panelArea13" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Mary Berry</h1>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<!-- Cake image -->
+				<center><img id="imgCake" src="marryBerry.jpg" width="320" /></center>
+			
+			<p>Mary Berry, is a British food writer and television presenter. After being encouraged in domestic science classes at school, she studied catering and institutional management at college. She then moved to France at the age of 21 to study at Le Cordon Bleu school, before working in a number of cooking-related jobs.
+
+She has published more than 75 cookery books including her bestselling Baking Bible in 2009. Her first book was The Hamlyn All Colour Cookbook in 1970. She hosted several television series for the BBC and Thames Television. Berry is an occasional contributor to Woman's Hour and Saturday Kitchen. She was a judge on the BBC One (originally BBC Two) television programme The Great British Bake Off from its launch in 2010 until 2016.
+				
+			</p>
+
+			<button class="link" onclick="location.href='http://www.maryberry.co.uk/';">Mary Berry Website</button>
+					
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+<!-- Start of the Blog page -->
+		<div data-role="page" data-theme="a" id="blog"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea14"></a>
+				</div>
+				<div data-role="panel" id="panelArea14" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Baker's Blog</h1>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				
+			<h1>Start a Discussion</h1>
+					<p>Post your question</p>
+					<p id="blogComments"></p>
+			<form method="post">
+				<label>Name: <input id="blog_first_name" name="blog_first_name"></label>
+				<label>Email: <input id="blog_user_email" name="blog_user_email"></label>
+				<div>
+					<textarea name="blogComments" id="blog_comment" style="font-family:sans-serif;font-size:1.2em;">
+					 
+					</textarea>
+				</div>
+				<input type="button" value="Submit" onclick="saveBlogComment()">
+			</form>
+
+			
+					
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+<!-- Start of the My Accounts page -->
+		<div data-role="page" data-theme="a" id="myAccount"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea14"></a>
+				</div>
+				<div data-role="panel" id="panelArea14" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>My Account</h1>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<p>Details about your account:</p>
+				<p id="myAccInfo"> </p>
+
+
+				<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+                <iframe src="https://www.youtube.com/embed/AVrrHJoSHPU" frameborder="0" allowfullscreen>
+                </iframe>   
+            	</div>
+
+            	<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+                <iframe src="https://www.youtube.com/embed/N0mlAWanUUY" frameborder="0" allowfullscreen>
+                </iframe>   
+            	</div>
+
+				<p>You may uplaod your baking videos on the platform here:</p>
+			<form method="POST" enctype="multipart/form-data">
+		    	<input id="video_file" name="video_file" type="file">
+		    	<input type="button" class="button" value="Upload">
+			</form>
+			<div class="video-display"></div>
+					
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+
+<!-- Start of the Help page -->
+		<div data-role="page" data-theme="a" id="help"> 
+			<div data-role="header" data-theme="b">
+				<h1>Baker's Bite</h1>
+				<div>
+					<a href="#" class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea14"></a>
+				</div>
+				<div data-role="panel" id="panelArea14" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#mainMenu" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#bnb" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Bread and Biscuits</a></br>
+					<a href="#cakes" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Cakes</a></br>
+					
+					<a href="#pastry" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow" data-theme="b">Pastry</a>
+					<a href="#savory" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Savory</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Help</h1>
+							<h2>Having trouble using the application?</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				
+				<p>Thanks for using Baker's Bite!</p>
+				<p>For additional help please get in touch with </p>
+				<p>Bhagyashree Suresh (bs693@drexel.edu)</p>
+
+			</div><!-- /content -->
+
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#mainMenu" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Browse</a></li>
+						<li> <a href="#experts" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Experts</a></li>
+						<li> <a href="#blog" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Blog</a></li>
+						<li> <a href="#myAccount" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-user ui-btn-b ui-shadow">My Account</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Bhagyashree Suresh
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+
+
+<footer>CS530: Developing User Interfaces &copy; 2018</footer>
+</div>
+</body>
+</html>
